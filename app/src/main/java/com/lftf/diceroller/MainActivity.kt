@@ -27,10 +27,14 @@ class MainActivity : AppCompatActivity() {
      * Função para rolar um dado e alterar a exibição no TextView
      */
     private fun rollDice() {
-        val dice = Dice(6)
-        val diceRoll = dice.roll()
-        val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = diceRoll.toString()
+        val dice1 = Dice(6)
+        val dice2 = Dice(6)
+
+        val resultTextView1: TextView = findViewById(R.id.textView1)
+        val resultTextView2: TextView = findViewById(R.id.textView2)
+
+        resultTextView1.text = "Primeiro dado: ${dice1.roll().toString()}"
+        resultTextView2.text = "Segundo dado: ${dice2.roll().toString()}"
     }
 
     /**
